@@ -9,5 +9,6 @@ int main() {
     fprintf(fptr, "%d", i);
   }
   fclose(fptr);
+  remove("set1DIO.txt");
   return 0;
 }
