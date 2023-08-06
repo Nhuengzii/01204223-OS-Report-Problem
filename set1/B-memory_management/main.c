@@ -12,6 +12,7 @@ void proof(int level) {
   if (level < 3) {
     proof(level + 1);
   }
+  free(mallocVar);
 }
 
 int main() {
