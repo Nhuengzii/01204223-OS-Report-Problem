@@ -2,12 +2,14 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-#pragma omp parallel
-  {
-    int id = omp_get_thread_num();
-    int nthreads = omp_get_num_threads();
-    printf("Hello from thread %d of %d\n", id, nthreads);
+  int sum = 0, n = 0;
+  scanf("%d", &n);
+#pragma omp parallel for
+  for (int i = 0; i < n; i++) {
+    int r;
+    scanf("%d", &r);
+    sum += r;
   }
-
+  printf("%d\n", sum / n);
   return 0;
 }
