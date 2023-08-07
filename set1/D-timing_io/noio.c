@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void doNothing(int i) {
   if (i == -1)
@@ -7,8 +8,9 @@ void doNothing(int i) {
   ;
 }
 
-int main() {
-  for (int i = 0; i < 123456789; i++) {
+int main(int argc, char *argv[]) {
+  int iterations = atoi(argv[1]);
+  for (int i = 0; i < iterations; i++) {
     doNothing(i);
   }
   return 0;
