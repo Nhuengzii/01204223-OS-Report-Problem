@@ -11,9 +11,9 @@ echo "$SIZE" > tc.txt
 while [ $I -le $SIZE ]
 do
   echo "$I" >> tc.txt
-  SUM=`expr $SUM + $I`
-  I=`expr $I + 1`
+  SUM=$(($SUM+$I))
+  I=$(($I+1))
 done
 echo "Sum is: $SUM"
 echo "Size is $SIZE"
-echo `expr $SUM / $SIZE`
+echo $(($SUM/$SIZE))
